@@ -10,19 +10,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/templatemo-diagoona.css" rel="stylesheet" />
-<!--
 
-TemplateMo 550 Diagoona
-
-https://templatemo.com/tm-550-diagoona
-
--->
 </head>
 </head>
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
 //]]></script>
-
 <body>
     <div class="tm-container">        
         <div>
@@ -70,34 +63,112 @@ https://templatemo.com/tm-550-diagoona
                 <main class="tm-col-right">
                     <section class="tm-content">
                         <div class="media my-3 mb-5 tm-service-media tm-service-media-img-l">
-                            
-                            
+                
                             <div class="media-body tm-service-text">
-                                <h2 class="mb-4 tm-content-title">My favourite heros</h2>
-                            </div> 
+                                <h2 style="text-align: right">My Favourite Heros</h2>
+                                <br>
+                                <br>
+                                <table >
+
+                                    <caption>My Favorite heros</caption>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th>Real Name</th>
+                                      <th>Age</th>
+                                      <th>Icon</th>
+                                      <th>Hero Type</th>
+                                      <th>Difficulty</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Ana</td>
+                                      <td>Ana Amari</td>
+                                      <td>60</td>
+                                      <td><img src="overwatch/ana.png"width="100" height="150"></td>
+                                      <td><img src="overwatch/heal.png" width="60" height="50"><br>Healer</td>
+                                      <td><canvas id="anadiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("anadiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,50,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bastion</td>
+                                        <td style="text-align:center">SST Laboratories Siege Automaton E54, “Bastion"</td>
+                                        <td>30</td>
+                                        <td><img src="overwatch/bastion.png" width="100" height="150"></td>
+                                        <td><img src="overwatch/dps.png" width="60" height="50"><br>Damage</td>
+                                        <td><canvas id="basdiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("basdiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,200,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Roadhog</td>
+                                        <td>Mako Rutledge</td>
+                                        <td>48</td>
+                                        <td><img src="overwatch/hog.png"width="100" height="150"></td>
+                                        <td><img src="overwatch/tank.png" width="60" height="50"><br>Tank</td>
+                                        <td><canvas id="hogdiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("hogdiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,100,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Soldier 76</td>
+                                        <td>Unknown</td>
+                                        <td>Unknown</td>
+                                        <td><img src="overwatch/soldier.png"width="100" height="150"></td>
+                                        <td><img src="overwatch/dps.png" width="60" height="50"><br>Damage</td>
+                                        <td><canvas id="soldiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("soldiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,400,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                      </tr>
+                                      
+                                </table>
                         </div>
-                        <div class="media my-3 mb-5 tm-service-media tm-service-media-img-l">
+                        </div>
+                        <div>
                             
-                            <img src="img/services-1.jpg" alt="Image" class="tm-service-img">
-                            <div class="media-body tm-service-text">
-                                <h2 class="mb-4 tm-content-title">Roadhog</h2>
-                                <p>Roadhog uses his signature Chain Hook to pull his enemies close before shredding them with blasts from his Scrap Gun. He’s hardy enough to withstand tremendous damage, and can recover his health with a short breather.</p>
-                            </div> 
                         </div>
-                        <div class="media my-3 mb-5 tm-service-media">                            
-                            <div class="media-body tm-service-text">
-                                <h2 class="mb-4 tm-content-title">Soldier76</h2>
-                                <p>Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.</p>
-                            </div> 
-                            <img src="img/services-2.jpg" alt="Image" class="tm-service-img-r">
-                        </div>
-                        <div class="media my-3 tm-service-media tm-service-media-img-l">
-                            <img src="img/services-3.jpg" alt="Image" class="tm-service-img">
-                            <div class="media-body tm-service-text">
-                                <h2 class="mb-4 tm-content-title">Ana</h2>
-                                <p>Ana’s versatile arsenal allows her to affect heroes all over the battlefield. Her Biotic Rifle rounds and Biotic Grenades heal allies and damage or impair enemies; her sidearm tranquilizes key targets, and Nano Boost gives one of her comrades a considerable increase in power.</p>
-                            </div> 
-                        </div>                      
+                        
+                        
+                                            
                     </section>
                 </main>
             </div>
@@ -120,8 +191,6 @@ https://templatemo.com/tm-550-diagoona
                 </footer>
             </div>  
         </div>        
-
-        <!-- Diagonal background design -->
         <div class="tm-bg">
             <div class="tm-bg-left"></div>
             <div class="tm-bg-right"></div>
