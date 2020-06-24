@@ -1,16 +1,209 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heroes Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="css/mycss.css" rel="stylesheet" />
 
 </head>
+</head>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 <body>
+    <div class="tm-container">        
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <!--<i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>-->
+                        <img src="img\download.png"width="120" height="120">
+                        <div class="media-body">
+                            <h1 class="tm-sitename text-uppercase">Overwatch</h1>
+                            <p class="tm-slogon">A FPS Massively Multi-player Shooter</p>
+                        </div>        
+                    </div>
+                </div>
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" 
+                            data-toggle="collapse" data-target="#navbar-nav" 
+                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="heroes.html">Heros <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="maps.html">Maps</a>
+                                </li>                             
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>                            
+                        </div>                        
+                    </nav>
+                </div>
+            </div>
+            
+            
+            <div class="tm-row">
+                <div class="tm-col-left"></div>
+                <main class="tm-col-right">
+                    <section class="tm-content">
+                        <div class="media my-3 mb-5 tm-service-media tm-service-media-img-l">
+                
+                            <div class="media-body tm-service-text">
+                                <h2 style="text-align: right">My Favourite Heros</h2>
+                                <br>
+                                <br>
+                                <table >
 
-	<img src="img/diagoona-bg-2.jpg" usemap="#image-map">
+                                    <caption>My Favorite heros</caption>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th>Real Name</th>
+                                      <th>Age</th>
+                                      <th>Icon</th>
+                                      <th>Hero Type</th>
+                                      <th>Difficulty</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Ana</td>
+                                      <td>Ana Amari</td>
+                                      <td>60</td>
+                                      <td><a href="ana.html"><img src="overwatch/ana.png"width="100" height="150"></a></td>
+                                      <td><img src="overwatch/heal.png" width="60" height="50"><br>Healer</td>
+                                      <td><canvas id="anadiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("anadiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,50,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bastion</td>
+                                        <td style="text-align:center">SST Laboratories Siege Automaton E54, “Bastion"</td>
+                                        <td>30</td>
+                                        <td><img src="overwatch/bastion.png" width="100" height="150"></td>
+                                        <td><img src="overwatch/dps.png" width="60" height="50"><br>Damage</td>
+                                        <td><canvas id="basdiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("basdiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,200,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Roadhog</td>
+                                        <td>Mako Rutledge</td>
+                                        <td>48</td>
+                                        <td><img src="overwatch/hog.png"width="100" height="150"></td>
+                                        <td><img src="overwatch/tank.png" width="60" height="50"><br>Tank</td>
+                                        <td><canvas id="hogdiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("hogdiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,100,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Soldier 76</td>
+                                        <td>Unknown</td>
+                                        <td>Unknown</td>
+                                        <td><img src="overwatch/soldier.png"width="100" height="150"></td>
+                                        <td><img src="overwatch/dps.png" width="60" height="50"><br>Damage</td>
+                                        <td><canvas id="soldiff" width="150" height="50" style="border:1px solid #d3d3d3;"></canvas>
+                                            <script>
+                                                var c = document.getElementById("soldiff");
+                                                var ctx = c.getContext("2d");
+                                                // Create gradient
+                                                var grd = ctx.createLinearGradient(0,0,400,0);
+                                                grd.addColorStop(0,"green");
+                                                grd.addColorStop(1,"red");
+                                                // Fill with gradient
+                                                ctx.fillStyle = grd;
+                                                ctx.fillRect(0,0,200,80);
+                                            </script>
+                                       </td>
+                                      </tr>
+                                      
+                                </table>
+                        </div>
+                        </div>
+                        <div>
+                            <a class="nav-link tm-nav-link" href="imagemap.html">Click here to see more heros</a>
+                        </div>
+                        
+                        
+                                            
+                    </section>
+                </main>
+            </div>
+        </div>        
 
-<map name="image-map">
-    <area target="_blank" alt="Genji" title="Genji" href="https://playoverwatch.com/en-us/heroes/genji/" coords="154,507,88,527,78,614,81,797,185,794,173,578" shape="poly">
-    <area target="_blank" alt="Roadhog" title="Roadhog" href="https://playoverwatch.com/en-us/heroes/roadhog/" coords="129,346,205,317,258,490,390,424,482,490,434,536,332,622,219,571" shape="poly">
-    <area target="_blank" alt="Junkrat" title="Junkrat" href="https://playoverwatch.com/en-us/heroes/junkrat/" coords="265,634,207,644,190,724,200,799,299,799,299,716,299,677,283,651" shape="poly">
-    <area target="_blank" alt="Mei" title="Mei" href="https://playoverwatch.com/en-us/heroes/mei/" coords="375,604,433,554,480,602,465,795,383,799,368,656" shape="poly">
-</map>
-	</body>
+        <div class="tm-row">
+            <div class="tm-col-left text-center">            
+                <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control active" data-id="0"></li>
+                    <li class="tm-bg-control" data-id="1"></li>
+                    <li class="tm-bg-control" data-id="2"></li>
+                </ul>            
+            </div>        
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                    <p class="mb-0">©2020 BLIZZARD ENTERTAINMENT, INC. ALL RIGHTS RESERVED. 
+                    
+                    | Website: <a href="https://playoverwatch.com/en-us/" class="tm-text-link">playoverwatch.com</a></p>
+                    Made by:-  Joshua Lobo &nbsp; 3MCS &nbsp; 1947105
+                </footer>
+            </div>  
+        </div>        
+        <div class="tm-bg">
+            <div class="tm-bg-left"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
 </html>

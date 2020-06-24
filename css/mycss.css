@@ -7,6 +7,19 @@ body {
     background-color: #2C353C;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left:10%;
+    transform: translate(-50%, -50%);
+    color:black;
+    margin-left: 27%;
+    text-align: justify;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+  }
 
 a { 
     transition: all 0.3s ease; 
@@ -146,8 +159,20 @@ table, th, td {
     padding-left: 70px;
     padding-right: 70px;
 }
+.tm-col-right1{
+    width: 80%;
+    height: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+}
 
 main.tm-col-right{
+    
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.tm-col-right{
     
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -172,6 +197,13 @@ main.tm-col-right{
 
 .tm-content {
     max-width: 660px;
+    margin-top: 50px;
+    padding-right: 20px;
+    text-align:justify;
+    
+}
+.tm-content1 {
+    width: 80%;
     margin-top: 50px;
     padding-right: 20px;
     text-align:justify;

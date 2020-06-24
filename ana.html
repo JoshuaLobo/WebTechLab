@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Page</title>
+    <title>My Favourite Game</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/mycss.css" rel="stylesheet" />
 
-</head>
 </head>
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
@@ -43,15 +42,16 @@
                                 <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="index.html">Home</a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link tm-nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link tm-nav-link" href="heroes.html">Heros <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="heroes.html">Heros</a>
-                                </li>     
-                                <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="maps.html">Maps</a>
-                                </li>                        
+                                </li>                                
                                 <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
                                 </li>
@@ -62,35 +62,43 @@
             </div>
             
             <div class="tm-row">
-                <div class="tm-col-left"></div>
-                <main class="tm-col-right">
-                    <section class="tm-content tm-about">
-                        <h2 class="mb-5 tm-content-title">ABOUT BLIZZARD ENTERTAINMENT</h2>
-                        <hr class="mb-4">
-                        <div class="media my-3">
-                            <ul>
-                            <li>Blizzard Entertainment® is a premier developer and publisher of entertainment software.</li>
-                            <li> After establishing the Blizzard Entertainment label in 1994, the company quickly became one of the most popular and well-respected makers of computer games.</li>
-                            <li>By focusing on creating well-designed, highly enjoyable entertainment experiences, Blizzard Entertainment has maintained an unparalleled reputation for quality since its inception.</li>
-                            </ul>
-
+                
+                <main >
+                    <section  >
+                        <div class="tm-col-right">
+                        <h2 style="margin-left: 110px" class="mb-5 tm-content-title">ANA</h2>
                         </div>
-                        <hr class="mb-4">
+                        <div class="container">
+                            <video  style="margin-left: 20px" width=90% height=50%  autoplay="" loop="" muted="">
+                            <source src="media/ana/idle-video.webm" type="video/webm">
+                            <source src="media/ana/ana/idle-video.mp4" type="video/mp4">
+                             </video>
+                             <div  class="centered">Ana’s versatile arsenal allows her to affect heroes all over the battlefield. <br>
+                            Her Biotic Rifle rounds and Biotic Grenades heal allies <br>and damage or impair enemies; <br>
+                            her sidearm tranquilizes key targets, <br>and Nano Boost gives one of her comrades a considerable increase in power.</div>
+                            </div>
+                        <hr class="mb-5">
+                        <div class="tm-col-right">
+                             <p class="mb-5">
+                                 <h1 class="mb-5"></h1>
+                            </p>
+                            <p class="centered" style="text-align: justify;">
+                                <h2>BIOTIC RIFLE</h2>
+                                Ana’s rifle shoots darts that can restore health to her allies or deal ongoing damage to her enemies. She can use the rifle’s scope to zoom in on targets and make highly accurate shots.
+                            </p>
+                            <embed class=""type="video/webm" src="media/ana/video-ability.webm" autoplay="" loop="" muted="" width="600px" height="500px">
+                        </div>
+                        <hr class="mb-5">
+                        <div class="tm-col-right">
+                            <h2>Ultimate Voice Line</h2>
+                            <audio controls>
+                                <source src="media/ana/Ana_-_(Arabic)_Show_them_your_strength!_(Female).wav" type="audio/ogg">
+                              </audio>
+                        </div>
+                        <p class="mb-5">
+                            </p>                        
                         
-                        <div class="media my-3">
-                            <ol><h2 >Top Blizzard Games</h2>
-                                <li>World of Warcraft</li>
-                                <li>Overwatch</li>
-                                <li>Hearthstone</li>
-                                <li>Diablo III</li>
-                                and many <a class="tm-text-link" href="https://www.blizzard.com/en-us/games/">more.</a>
-                            </ol>
-                            
-                        </div>
-                                              
                     </section>
-                    
-                    
                     
                 </main>
             </div>
@@ -102,8 +110,7 @@
                     <li class="tm-bg-control active" data-id="0"></li>
                     <li class="tm-bg-control" data-id="1"></li>
                     <li class="tm-bg-control" data-id="2"></li>
-                </ul>
-                
+                </ul>            
             </div>        
             <div class="tm-col-right tm-col-footer">
                 <footer class="tm-site-footer text-right">
@@ -112,10 +119,10 @@
                     | Website: <a href="https://playoverwatch.com/en-us/" class="tm-text-link">playoverwatch.com</a></p>
                     Made by:-  Joshua Lobo &nbsp; 3MCS &nbsp; 1947105
                 </footer>
-            </div>   
-        </div>        
+            </div>  
+        </div>
 
-      
+        
         <div class="tm-bg">
             <div class="tm-bg-left"></div>
             <div class="tm-bg-right"></div>
@@ -126,5 +133,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/templatemo-script.js"></script>
+    
+    
 </body>
 </html>
