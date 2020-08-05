@@ -1,0 +1,85 @@
+<?xml version = "1.0" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="IntXMLCSS.css"?> 
+<!DOCTYPE document [ 
+<!ELEMENT document (Hero_Information)*> 
+<!ELEMENT Hero_Information (name, age,type, difficulty)> 
+<!ELEMENT name (lastname, firstname)> 
+<!ELEMENT lastname (#PCDATA)> 
+<!ELEMENT firstname (#PCDATA)> 
+<!ELEMENT age (#PCDATA)> 
+<!ELEMENT type (#PCDATA)*> 
+<!ELEMENT difficulty (#PCDATA)> 
+] > 
+<document>
+  <title>This Page Shows the Heros Information Page</title>
+  <title>Internal DTD and CSS Styling to XML Respectively</title>
+
+<title>HEALERS</title>
+  <Hero_Information>
+        <name>
+        	<firstname>Ana</firstname>
+        	<lastname>Amari</lastname>
+        </name>
+        <age>Age : 60 </age> 
+        <type>Type : Main Healer</type> 
+        <difficulty>Difficulty : 4.5</difficulty>  
+    </Hero_Information> 
+
+<Hero_Information>
+        <name>
+        	<firstname>Tekhartha</firstname>
+        	<lastname>Zenyatta</lastname>
+        </name>
+        <age>Age : 20 </age> 
+        <type>Type : Off Healer</type> 
+        <difficulty>Difficulty : 4.7</difficulty>  
+    </Hero_Information> 
+
+
+
+
+<title>TANKS</title>
+
+<Hero_Information>
+	   <name>
+        	<firstname>Mako</firstname>
+        	<lastname>Rutledge</lastname>
+        </name>
+        <age>Age : 48</age> 
+        <type>Type : Off Tank</type> 
+        <difficulty>Difficulty : 3.0</difficulty> 
+    </Hero_Information> 
+
+<Hero_Information>
+	   <name>
+        	<firstname>Reinhardt</firstname>
+        	<lastname>Wilhelm</lastname>
+        </name>
+        <age>Age : 61</age> 
+        <type>Type : Main Tank / Shield Tank</type> 
+        <difficulty>Difficulty : 1.0</difficulty> 
+    </Hero_Information> 
+
+<title>DPS aka DAMAGE DEALERS</title>
+<Hero_Information>
+
+	   <name>
+        	<firstname>Genji</firstname>
+        	<lastname>Shimada</lastname>
+        </name>
+        <age>Age : 35</age> 
+        <type>Type : Dive Damage</type> 
+        <difficulty>Difficulty : 5.0</difficulty> 
+    </Hero_Information> 
+
+    <Hero_Information>
+        <name>
+        	<firstname>Siege Automaton E54,</firstname>
+        	<lastname>Bastion</lastname>
+        </name>
+        <age>Age : 30</age> 
+        <type>Type : upfront Damage </type> 
+        <difficulty>Difficulty : 1.5</difficulty> 
+    </Hero_Information> 
+
+</document>
