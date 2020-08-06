@@ -1,9 +1,9 @@
-<!ELEMENT list (product) >
-<!ELEMENT product (name, brief_intro, features, list_of_products, item)>
+<!ELEMENT hero (info) >
+<!ELEMENT info (name, brief_intro, age, list_of_abilities, item)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT brief_intro (#PCDATA)>
-<!ELEMENT features (#PCDATA)>
-<!ELEMENT list_of_products (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT list_of_abilities (#PCDATA)>
 <!ELEMENT item (name, details_info)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT details_info (#PCDATA)>

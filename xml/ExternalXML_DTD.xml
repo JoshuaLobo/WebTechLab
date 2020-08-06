@@ -1,46 +1,42 @@
 <?xml version="1.0"?>
 
 <!DOCTYPE list SYSTEM "simple.dtd">
-<list>
-  <product>
-    <name>Adobe Creative Cloud</name>
-    
-    <brief_intro>Creative Cloud is a collection of 20+ desktop and mobile apps and services for photography, design, video, web, UX and more. Now you can take your ideas to new places, draw and paint and design for 3D and AR.</brief_intro>
-    
-    <features>Creative Cloud for desktop is a great place to start any creative project. Quickly launch and update your desktop apps. Manage and share your assets stored in Creative Cloud. Download fonts from Adobe Typekit or high-quality royalty-free assets right within the app and showcase and discover creative work on Behance. Best of all, the application stays out of your way but is there when you need it, so you can focus on creativity.
-    </features>
-    
-    <list_of_products>
-      <item>
-        <name>1. Adobe XD</name>
-        <details_info>Adobe XD is a vector-based user experience design tool for web apps and mobile apps, developed and published by Adobe Inc. It is available for macOS and Windows, although there are versions for iOS and Android to help preview the result of work directly on mobile devices</details_info>
-      </item>
+<hero>
+  <info>
+    <name>Angela Ziegler</name>
+     		<brief_intro>Mercy's Valkyrie suit helps keep her close to teammates like a guardian angel;healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staff.</brief_intro>
+   		    <age>37</age>
+        <list_of_abilities>
+    		  <item>
+		        <name>1. CADUCEUS STAFF</name>
+	     		   <details_info>Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that allay's health or increase the amount of damage they deal.</details_info>
+	      </item>
         
-      <item>
-        <name>2. Adobe Photoshop</name>
-        <details_info>Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS. It was originally created in 1988 by Thomas and John Knoll. Since then, the software has become the industry standard not only in raster graphics editing, but in digital art as a whole.</details_info>
-      </item>
+	      <item>
+     			   <name>2. CADUCEUS BLASTER</name>
+		        <details_info>Mercy shoots a round from her sidearm.</details_info>
+	      </item>
 
-      <item>
-        <name>3. Adobe InDesign</name>
-        <details_info>Adobe InDesign is a desktop publishing and typesetting software application produced by Adobe Systems. It can be used to create works such as posters, flyers, brochures, magazines, newspapers, presentations, books and ebooks.</details_info>
-      </item>
+	      <item>
+		        <name>3.GUARDIAN ANGEL</name>
+		        <details_info>Mercy flies towards a targerted allay, allowing her to reach them quickly and provide assitance in crucial moments.</details_info>
+	      </item>
 
-      <item>
-        <name>4. Adobe Illustrator</name>
-        <details_info>Adobe Illustrator is a vector graphics editor and design program developed and marketed by Adobe Inc. Originally designed for the Apple Macintosh, development of Adobe Illustrator began in 1985. Along with Creative Cloud, Illustrator CC was released.</details_info>
-      </item>
+     		 <item>
+		        <name>4.RESURRECT</name>
+		        <details_info>Mercy brings a dead ally back into the fight with full health.</details_info>
+	      </item>
 
-      <item>
-        <name>5. Adobe Premiere Pro</name>
-        <details_info>Adobe Premiere Pro is a timeline-based video editing software application developed by Adobe Systems and published as part of the Adobe Creative Cloud licensing program. First launched in 2003, Adobe Premiere Pro is a successor of Adobe Premiere.</details_info>
-      </item>
+     		 <item>
+		        <name>5. ANGELIC DESCENT</name>
+		        <details_info>Propelled by her Valkyrie suit, Mercy slows the speed of her descent from great heights.</details_info>
+	      </item>
 
-      <item>
-        <name>6. Adobe Acrobat DC</name>
-        <details_info>Adobe Acrobat Reader DC software is the free global standard for reliably viewing, printing, and commenting on PDF documents. And now, it's connected to the Adobe Document Cloud − making it easier than ever to work across computers and mobile devices.</details_info>
-      </item>
+     		 <item>
+		        <name>6. VALKYRIE</name>
+		        <details_info>Gain the ability to fly.Mercy's abilities are enhanced.</details_info>
+	      </item>
 
-    </list_of_products>
-  </product>
- </list>
+        </list_of_abilities>
+  </info>
+ </hero>
