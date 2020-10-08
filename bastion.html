@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Favourite Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="css/mycss.css" rel="stylesheet" />
+    <link href="css/test.css" rel="stylesheet" />
+
+</head>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+<body>
+    <div class="tm-container">        
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <!--<i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>-->
+                        <img src="img\download.png"width="120" height="120">
+                        <div class="media-body">
+                            <h1 class="tm-sitename text-uppercase">Overwatch</h1>
+                            <p class="tm-slogon">A FPS Massively Multi-player Shooter</p>
+                        </div>        
+                    </div>
+                </div>
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" 
+                            data-toggle="collapse" data-target="#navbar-nav" 
+                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="heroes.html">Heros <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="maps.html">Maps</a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>                            
+                        </div>                        
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="tm-row">
+                
+                <main class="tm-col-right">
+                    <section  class="tm-content tm-about">
+                        <div class="tm-col-right">
+                        <h2 style="margin-left: 110px" class="mb-5 tm-content-title">ADD NEW USER</h2>
+                        </div>
+                        <div class="app-page" ng-app="clientsApp" ng-controller="ClientsCtrl">
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" ng-model="search">
+        <label class="mdl-textfield__label" for="sample1">Search...</label>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col">
+      <table class="mdl-data-table mdl-data-table_full mdl-js-data-table mdl-shadow--4dp">
+        <colgroup>
+          <col style="width: 1px" />
+          <col style="width: 1px" />
+          <col />
+          <col style="width: 128px" />
+          <col style="width: 128px" />
+          <col style="width: 128px" />
+        </colgroup>
+        <thead>
+          <tr>
+            <thead>
+              <tr>
+                <th>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" class="mdl-checkbox__input">
+                  </label>
+                </th>
+                <th>Id</th>
+                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                <th>Age</th>
+                <th>Rating</th>
+                <th class="controls mdl-data-table__cell--non-numeric">Actions</th>
+              </tr>
+            </thead>
+          </tr>
+        </thead>
+        <tbody ng-repeat="client in clients | filter:search">
+          <tr ng-if="client != activeClient">
+            <td>
+              <mdl-checkbox></mdl-checkbox>
+            </td>
+            <td>{{ client.id }}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{client.name}}</td>
+            <td>{{client.age}}
+              <td>
+                <div class="mdl-textfield mdl-js-textfield">{{client.Rating | Rating}}</td>
+              <td class="controls mdl-data-table__cell--non-numeric">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" ng-click="edit(client)">Edit</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" ng-click="delete(client)">Delete</button>
+              </td>
+          </tr>
+          </tr>
+          <tr ng-if="client == activeClient">
+            <td>
+              <mdl-checkbox></mdl-checkbox>
+            </td>
+            <td>{{ client.id }}</td>
+            <td class="mdl-data-table__cell--non-numeric">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" ng-model="client.name">
+              </div>
+            </td>
+            <td>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" ng-model="client.age">
+              </div>
+            </td>
+            <td>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" ng-model="client.Rating">
+              </div>
+            </td>
+            <td class="controls mdl-data-table__cell--non-numeric">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" ng-click="update(client)">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="mdl-cell mdl-cell--3-col">
+        <form class="mdl-card mdl-shadow--2dp" novalidate role="form" name="clientForm">
+          <div class="mdl-card__title mdl-card--expand">
+            <h2 class="mdl-card__title-text">Create User</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" name="name" ng-model="newClient.name" required>
+              <label class="mdl-textfield__label" for="">Name:</label>
+              <span class="mdl-textfield__error" ng-show="clientForm.name.$error.required">Name is required</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="number" ng-model="newClient.age" name="age" required max="100" min="1">
+              <label class="mdl-textfield__label" for="">Age:</label>
+              <span class="mdl-textfield__error" ng-show="clientForm.age.$error.required">Age is required</span>
+              <span class="mdl-textfield__error" ng-show="clientForm.age.$error.integer">Age should be an integer</span>
+              <span class="mdl-textfield__error" ng-show="clientForm.age.$error.min">Age should be greater than 1</span>
+              <span class="mdl-textfield__error" ng-show="clientForm.age.$error.max">Age should be lesser than 100</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="number" ng-model="newClient.Rating" name="Rating" required max="1" min="0">
+              <label class="mdl-textfield__label" for="">Rating:</label>
+              <span class="mdl-textfield__error" ng-show="clientForm.Rating.$error.required">Rating is required</span>
+              <span class="mdl-textfield__error" ng-show="clientForm.Rating.$error.min">Rating should be greater than 0</span>
+              <span class="mdl-textfield__error" ng-show="clientForm.Rating.$error.max">Rating should be lesser than 1</span>
+            </div>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="create()" ng-disabled="clientForm.$invalid">Save</buttin>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+                       
+                            
+
+                            
+
+                            
+                             
+                        
+                       
+                                             
+                        
+                    </section>
+                    
+                </main>
+            </div>
+            
+
+        <div class="tm-row">
+            <div class="tm-col-left text-center">            
+                <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control active" data-id="0"></li>
+                    <li class="tm-bg-control" data-id="1"></li>
+                    <li class="tm-bg-control" data-id="2"></li>
+                </ul>            
+            </div>        
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                    <p class="mb-0">©2020 BLIZZARD ENTERTAINMENT, INC. ALL RIGHTS RESERVED. 
+                    
+                    | Website: <a href="https://playoverwatch.com/en-us/" class="tm-text-link">playoverwatch.com</a></p>
+                    Made by:-  Joshua Lobo &nbsp; 3MCS &nbsp; 1947105
+                </footer>
+            </div>  
+        </div>
+
+        
+        <div class="tm-bg">
+            <div class="tm-bg-left"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+    <script src="js/test.js"></script>
+    
+    
+</body>
+</html>
